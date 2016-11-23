@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= title
+  p datos
+
+  div 
+    table(border=1)
+        thead
+            tr
+                th N°
+                th Nombre PUNTOS INTERES
+
+        tbody
+            each itemp, i in datos
+                tr
+                    td
+                        label #{itemp.gid}
+                    td
+                        label #{itemp.name}                

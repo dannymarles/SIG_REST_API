@@ -18,7 +18,7 @@ SELECT row_to_json(fc) FROM (
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', {title: 'Express'});
+  res.render('index', { title: 'Express' });
 });
 
 /* GET Postgres JSON data */
@@ -30,9 +30,28 @@ router.get('/data', function (req, res) {
     result.addRow(row);
   });
   query.on("end", function (result) {
-    res.json(result);
+    res.json(result.rows);
     res.end();
   });
 });
+
+
+router.get('/cartagena', function (req, res, next) {
+
+  var client = new pg.Client(conString);
+  client.connect();
+  var query = client.query(coffee_query);
+  query.on("row", function (row, result) {
+    result.addRow(row);
+  });
+  query.on("end", function (result) {
+    res.render('tabla_datos', {
+      title: 'Puntos de cartagena',
+      datos: result.rows
+    });
+  });
+
+});
+
 
 module.exports = router;
