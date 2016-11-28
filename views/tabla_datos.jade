@@ -1,20 +1,24 @@
-extends layout
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js')
+  body.container
+    h1= title
+    
 
-block content
-  h1= title
-  p datos
-
-  div 
-    table(border=1)
-        thead
-            tr
-                th N°
-                th Nombre PUNTOS INTERES
-
-        tbody
-            each itemp, i in datos
+    div(class="col s12 m9")
+        table(class="highlight")
+            thead
                 tr
-                    td
-                        label #{itemp.gid}
-                    td
-                        label #{itemp.name}                
+                    th N°
+                    th NOMBRE DE LOS PUNTOS INTERES
+
+            tbody
+                each itemp, i in datos
+                    tr
+                        td
+                            label #{itemp.gid}
+                        td
+                            label #{itemp.name}                

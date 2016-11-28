@@ -18,8 +18,22 @@ SELECT row_to_json(fc) FROM (
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'cartagena' });
 });
+
+
+router.get('/', function (req, res, next) {
+  res.render('contacto', { title: 'contacto' });
+});
+
+
+router.get('/puntos', function (req, res, next) {
+  res.render('puntos', {
+    title: 'Puntos cartagena'
+  }
+  );
+});
+
 
 /* GET Postgres JSON data */
 router.get('/data', function (req, res) {

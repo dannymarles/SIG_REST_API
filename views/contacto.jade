@@ -1,4 +1,5 @@
 
+
 extends layout
 
 block content      
@@ -51,8 +52,17 @@ block content
           .flexslider
             ul.slides
                li
-                .banner-info
-                  h2 Información vial actualizada
+                h4 Contactenos
+                form
+                .ft-lt
+                    input(type='text', value='Primer Nombre', placeholder='', onfocus="this.value='';", onblur="if (this.value == '') {this.value = 'First Name';}")
+                    input(type='text', value='Segundo Nombre', placeholder='', onfocus="this.value='';", onblur="if (this.value == '') {this.value = 'Last Name';}")
+                    input(type='text', value='Correo Electronico', placeholder='', onfocus="this.value='';", onblur="if (this.value == '') {this.value = 'Email Address';}")
+                .ft-rgt
+                    textarea(placeholder='', onfocus="this.value='';", onblur="if (this.value == '') {this.value = 'Message';}") Mensaje
+                    input(type='submit', value='Enviar')
+                
+                 
         // FlexSlider
         script(defer='', src='js/jquery.flexslider.js')
         script(type='text/javascript').
@@ -78,10 +88,9 @@ block content
               img.img-responsive(src="Imagen/cap2.PNG" style="width: 874px; height: 272px;" alt=' ')
               .b-wrapper
                 h3.b-animate.b-from-top.top-in1.b-delay03
-          h4 Puntos de Interes Cartagena del Chaira
+          h4 Información Vial Actualizada
           p
-            | Por medio de los Sistemas de Informacion Geograficos se quieren dar a conocer los diferentes puntos de interes con los que cuenta 
-            | el Municipio de Cartagena del Chaira, como las Escuelas, Parques, Sitios turisticos, entre otros.
+            | A través de los usuarios @transitopolicia y @numeral767 tanto la Policía de Carreteras como el Ministerio de Transporte pretenden orientar a los usuarios de las vías para que estos tomen la mejor decisión a la hora de viajar por alguna de las carreteras del país.
         .clearfix
     // show
     // footer
@@ -91,3 +100,4 @@ block content
             | © 2016 Proyecto SIG II. | Realizado por: Marles Danny, Ruiz Robinson.  
             
     // footer
+
