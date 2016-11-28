@@ -63,17 +63,17 @@ label {
     border: none ! important;
 }
 .navbar-default .navbar-nav > li > a {
-    color: #20c157;
+    color: #12adf5;
     font-size: 1em;
     font-weight: 400;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color:#e8e9d7;
-	background:#20c157;
+	background:#12adf5;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: #e8e9d7;
-    background-color: #20c157;
+    background-color: #12adf5;
 }
 .nav > li > a {
     position: relative;
@@ -95,7 +95,7 @@ label {
 .reserv {
     float: right;
     width: 15%;
-	 background-color:#20c157;
+	 background-color:#152ff3;
 }
 .reserv a {
     padding: 1.9em 2.5em;
@@ -105,7 +105,7 @@ label {
 	text-decoration:none;
 }
 .logo h1 a {
-    color: #20c157;
+    color: #152ff3;
     font-size: 1.7em;
     display: block;
     font-weight: 400;
@@ -116,13 +116,13 @@ label {
 }
 /*-- header --*/
 .banner {
-    background: url(../images/1.jpg) no-repeat;
+    background: url(../Imagen/caquetatra.png) no-repeat;
     background-size: cover;
     width: 100%;
     min-height: 750px;
 }
 .banner-info h2 {
-    color: #20c157;
+    color: #12adf5;
     font-size: 3em;
     font-weight: 400;
     font-family: 'Julius Sans One', sans-serif;
@@ -154,7 +154,7 @@ label {
     background-color: #e8e9d7;
 }
 .draw h3 {
-    color: #20c157;
+    color: #12adf5;
     font-size: 2em;
     font-weight: 400;
     font-family: 'Julius Sans One', sans-serif;
@@ -173,7 +173,7 @@ label {
 i.f-1 {
     width: 30px;
     height: 30px;
-    background: url(../images/soci.png)no-repeat -10px -8px;
+    background: url(../Imagen/escudo.png)no-repeat -10px -8px;
     float: left;
     vertical-align: middle;
 }
@@ -274,7 +274,7 @@ i.g-1:hover{
 	padding:5em 0;
 }
 .mid-info h3 {
-    color: #e8e9d7;
+    color: #20c157;
     font-size: 2em;
     font-weight: 400;
     font-family: 'Julius Sans One', sans-serif;
@@ -296,7 +296,7 @@ i.g-1:hover{
 }
 /*-- footer --*/
 .footer {
-    background-color: #c1c2ba;
+    background-color: #e8e9d7;
     padding: 5em 0 1em;
 }
 .footer h4 {
@@ -509,7 +509,7 @@ address {
 }
 /*-- open --*/
 .banner-1 {
-    background: url(../images/1.jpg) center fixed;
+    background: url(../Imagen/caquetatra.png) center fixed;
     background-size: cover;
     width: 100%;
     min-height: 350px;
@@ -1146,7 +1146,7 @@ h2.typoh2{
     font-size: 2.5em;
 }
 .banner {
-    background: url(../images/1.jpg) 0px 39px;
+    background: url(../Imagen/caquetatra.png) 0px 39px;
     background-size: cover;
     width: 100%;
     min-height: 600px;

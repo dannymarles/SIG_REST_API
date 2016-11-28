@@ -1,28 +1,11 @@
-
-
-extends layout
-
-block content      
-    // banner
-    .banner
-      // header
-      // header-bottom
-      .header
-        .header-top
-          .container
-             // <div id="cabeza">                
-              <br />
-              <asp:Label ID="label" runat="server" Text="Conoce el Municipio"></asp:Label>
-              <br />
-              <asp:Label ID="label100" runat="server" Text="CARTAGENA DEL CHAIRA"></asp:Label>
-                </div>
-              
-            
-              
-            .logo
-               h5 
-                a(href='index.html') CARTAGENA DEL CHAIRA
-            .clearfix
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js')
+  body.container
+    h1= title
         .container
           .header-bottom
             nav.navbar.navbar-default(role='navigation')
@@ -47,57 +30,4 @@ block content
       // /header-bottom
       // header
       // banner-info
-      .container
-        section.slider
-          .flexslider
-            ul.slides
-               li
-                h4 Contactenos
-                form
-                .ft-lt
-                    input(type='text', value='Primer Nombre', placeholder='', onfocus="this.value='';", onblur="if (this.value == '') {this.value = 'First Name';}")
-                    input(type='text', value='Segundo Nombre', placeholder='', onfocus="this.value='';", onblur="if (this.value == '') {this.value = 'Last Name';}")
-                    input(type='text', value='Correo Electronico', placeholder='', onfocus="this.value='';", onblur="if (this.value == '') {this.value = 'Email Address';}")
-                .ft-rgt
-                    textarea(placeholder='', onfocus="this.value='';", onblur="if (this.value == '') {this.value = 'Message';}") Mensaje
-                    input(type='submit', value='Enviar')
-                
-                 
-        // FlexSlider
-        script(defer='', src='js/jquery.flexslider.js')
-        script(type='text/javascript').
-          $(function(){
-          });
-          $(window).load(function(){
-          $('.flexslider').flexslider({
-          animation: "slide",
-          start: function(slider){
-          $('body').removeClass('loading');
-          }
-          });
-          });
-        // FlexSlider
-        // banner-info
-    // banner
-    // show
-    .show
-      .container
-        .col-md-4.show-left
-          .col-md1
-            a.b-link-stripe.b-animate-go.thickbox(href='#')
-              img.img-responsive(src="Imagen/cap2.PNG" style="width: 874px; height: 272px;" alt=' ')
-              .b-wrapper
-                h3.b-animate.b-from-top.top-in1.b-delay03
-          h4 Información Vial Actualizada
-          p
-            | A través de los usuarios @transitopolicia y @numeral767 tanto la Policía de Carreteras como el Ministerio de Transporte pretenden orientar a los usuarios de las vías para que estos tomen la mejor decisión a la hora de viajar por alguna de las carreteras del país.
-        .clearfix
-    // show
-    // footer
-    .footer
-        .footer-text
-          p
-            | © 2016 Proyecto SIG II. | Realizado por: Marles Danny, Ruiz Robinson.  
-            
-    // footer
-
+     
