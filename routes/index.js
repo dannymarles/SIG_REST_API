@@ -2,19 +2,15 @@ var express = require('express');
 var router = express.Router();
 
 var pg = require('pg');
+pg.defaults.ssl = process.env.DATABASE_URL != undefined;
 var conString = process.env.DATABASE_URL || "postgres://postgres:root@localhost/postgres"; // Cadena de conexión a la base de datos
 
 // Set up your database query to display GeoJSON
-var coffee_query = "SELECT * FROM puntos_cartagena";
+var coffee_query = 'SELECT * from puntos_cartagena';
 
-/*
-SELECT row_to_json(fc) FROM (
-	SELECT array_to_json(array_agg(f)) As features FROM (
-		SELECT ST_AsGeoJSON(lg.geom)::json As geometry,
-		row_to_json((id, name)) As properties FROM cambridge_coffee_shops As lg
-	) As f
-) As fc
-*/
+
+
+
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -60,8 +56,8 @@ router.get('/cartagena', function (req, res, next) {
   });
   query.on("end", function (result) {
     res.render('tabla_datos', {
-      title: 'Puntos de cartagena',
-      datos: result.rows
+      title: 'Puntos de Interes cartagena',
+      datos: result.rows[0].row_to_json.datos
     });
   });
 

@@ -35,7 +35,7 @@ html
 
         script.
             // Create the map
-            var map = L.map('mapid').setView([1.6189118,-75.6213517], 5);
+            var map = L.map('mapid').setView([1.33408874400,-74.8409581650], 15);
 
             // Set up the OSM layer
             L.tileLayer(
@@ -52,15 +52,18 @@ html
                     console.log(response);
                     response.type = "FeatureCollection";
 
-                    var markers = response.features;
+                    var markers = response;
 
                     console.log('markers: ', markers)
 
                     for ( var i=0; i < markers.length; ++i ) 
                     {
-                        L.marker([markers[i].geometry.coordinates[1], markers[i].geometry.coordinates[0]])
-                            .bindPopup( '<a href="' + markers[i].properties.f1 + '" target="_blank">' + markers[i].properties.f2 + '</a>' )
+                        L.marker([markers[i].coor_y, markers[i].coor_x])
+                            .bindPopup( '<a href="' + markers[i].gid + '" target="_blank">' + markers[i].name + '</a>' )
                             .addTo( map );
                     }
                 }
             });
+
+
+

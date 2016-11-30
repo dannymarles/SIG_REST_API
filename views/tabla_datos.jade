@@ -14,6 +14,8 @@ html
                 tr
                     th N°
                     th NOMBRE DE LOS PUNTOS INTERES
+                    th LONGITUD
+                    th LATITUD
 
             tbody
                 each itemp, i in datos
@@ -21,4 +23,8 @@ html
                         td
                             label #{itemp.gid}
                         td
-                            label #{itemp.name}                
+                            label #{itemp.name}  
+                        td   
+                            label #{itemp.coor_x}
+                        td
+                            label #{itemp.coor_y}               
