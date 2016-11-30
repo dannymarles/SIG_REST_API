@@ -6,7 +6,7 @@ pg.defaults.ssl = process.env.DATABASE_URL != undefined;
 var conString = process.env.DATABASE_URL || "postgres://postgres:root@localhost/postgres"; // Cadena de conexión a la base de datos
 
 // Set up your database query to display GeoJSON
-var coffee_query = 'SELECT * from puntos_cartagena';
+var coffee_query = 'SELECT * from puntos_cartagena order by name';
 
 
 
